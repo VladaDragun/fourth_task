@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test 4</title>
+  <style type="text/css">
+
+    @import url('https://fonts.googleapis.com/css?family=Jomolhari&display=swap');
+
+    * {
+      margin: 0;
+      outline: none;
+      font-family: 'Jomolhari', serif;
+    }
+
+    button {
+      margin: 250px 430px;
+      width: 500px;
+      height: 70px;
+      font-size: 40px;
+      color: #424049;
+      text-decoration: none;
+      border-radius: 5px;
+      background: #fff;
+      box-shadow:
+       0 1px rgba(255,255,255,.2) inset,
+       0 3px 5px rgba(0,1,6,.5);
+      transition: .2s ease-in-out;
+      outline: none;
+      border: 0;
+    }
+
+    button:hover:not(:active) {
+      background: #feea8f;
+      color: #424049;
+    }
+
+    button:active {
+      top: 1px;
+      background: #feea8f;
+      color: #424049;
+      box-shadow:
+       0 0 1px rgba(0,0,0,.5) inset,
+       0 2px 3px rgba(0,0,0,.5) inset,
+       0 1px 1px rgba(255,255,255,.1);
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <button id="btn" onclick="sbmt();">
+    НАЖМИ НА МЕНЯ!
+  </button>
+
+<script type="text/javascript">
+
+  function sbmt() {
+    let text = prompt('Введите текст: ', 'здесь');
+
+    let arr = text
+                .split(' ')
+                .sort((a,b) => {
+                    return b.length - a.length;
+                });
+
+    console.log(arr);
+
+    return alert(`Три самых длинных слова: ${arr[0]}; ${arr[1]}; ${arr[2]};`);
+  }
+
+</script>
+
+</body>
+</html>
